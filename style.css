@@ -2,3 +2,37 @@ body {
   font-family: cursive;
   background-color: black;
 }
+
+.container{
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  grid-template-areas: 
+  "header header"
+  "aboutMe image"
+  "skills work"
+  "footer footer";
+}
+
+.header{
+  grid-area: header;
+}
+
+.aboutMe{
+  grid-area: aboutMe;
+}
+
+.image{
+  grid-area: image;
+}
+
+.skills{
+  grid-area: skills;
+}
+
+.work{
+  grid-area: work;
+}
+
+.footer{
+  grid-area: footer;
+}
