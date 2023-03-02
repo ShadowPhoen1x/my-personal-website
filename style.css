@@ -5,6 +5,8 @@ body {
 
 .container{
   display: grid;
+  width: 2000px;
+  height: 1500px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
   grid-template-areas: 
   "header header"
@@ -15,24 +17,38 @@ body {
 
 .header{
   grid-area: header;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutMe{
   grid-area: aboutMe;
+  display: flex;
+  justify-content: center;
 }
 
 .image{
   grid-area: image;
+  display: flex;
+  /* justify-content: center; */
+  height: 500px;
+  width: 500px;
 }
 
 .skills{
   grid-area: skills;
+  display: flex;
+  justify-content: center;
 }
 
 .work{
   grid-area: work;
+  display: flex;
+  justify-content: center;
 }
 
 .footer{
   grid-area: footer;
+  display: flex;
+  justify-content: center;
 }
