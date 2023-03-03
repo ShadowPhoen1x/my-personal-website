@@ -2,21 +2,35 @@ body {
   font-family: cursive;
   background-color: black;
 }
+.navspace{
+  padding: 10px;
+  display: inline-flex;
+}
 
 .container{
   display: grid;
-  width: 2000px;
-  height: 1500px;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  /* width: 1700px;
+  height: 1200px; */
+  grid-template: 100px 100px 1fr 1fr 1fr / repeat(2, 1fr);
   grid-template-areas: 
   "header header"
+  "header2 header2"
   "aboutMe image"
   "skills work"
   "footer footer";
+  row-gap: 5px;
+  color: blueviolet;
 }
 
 .header{
   grid-area: header;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header2{
+  grid-area: header2;
   display: flex;
   justify-content: center;
 }
@@ -25,14 +39,19 @@ body {
   grid-area: aboutMe;
   display: flex;
   justify-content: center;
+  padding: 1px 15px;
 }
 
 .image{
   grid-area: image;
   display: flex;
-  /* justify-content: center; */
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
+  /* max-width:100%;
+  max-height: 100%;
+  min-width: 5%;
+  min-height: 5%; */
+  object-fit: contain
 }
 
 .skills{
@@ -45,10 +64,17 @@ body {
   grid-area: work;
   display: flex;
   justify-content: center;
+  margin: 0 10px;
 }
 
 .footer{
   grid-area: footer;
   display: flex;
   justify-content: center;
+}
+
+.list{
+  margin: 0 10px;
+  padding: 0;
+  list-style: none;
 }
