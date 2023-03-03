@@ -27,7 +27,7 @@ body {
 
 .gridContainer{
   display: grid;
-  grid-template: 100px 100px 1fr 1fr 1fr / repeat(2, 1fr);
+  grid-template: 100px 100px 1fr 400px 200px / repeat(2, 1fr);
   grid-template-areas: 
   "header header"
   "header2 header2"
@@ -53,27 +53,31 @@ body {
 
 .aboutMe{
   grid-area: aboutMe;
-  display: flex;
+  display: block;
   justify-content: center;
   padding: 1px 15px;
+  background-color: aliceblue;
 }
 
 .imageContainer {
   grid-area: image;
-  display: block;
+  display: flex;
   clear: both;
   height: auto;
   width: 100%;
-  min-width: 0%;
-  min-height: 0%;
+  min-width: 0;
+  min-height: 0;
   object-fit: contain
-  overflow: hidden;
 }
 
 
 
 .image{
   flex-shrink: 100%;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 
 .image:hover{
@@ -84,12 +88,14 @@ body {
 .skills{
   grid-area: skills;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
 }
 
 .work{
   grid-area: work;
-  display: flex;
+  display: block;
   justify-content: center;
   margin: 0 10px;
 }
