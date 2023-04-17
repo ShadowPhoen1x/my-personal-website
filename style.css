@@ -15,6 +15,7 @@ body {
   top: 3em;
   opacity: 75%;
   z-index: 2;
+  border-radius: 10%;
 }
 
 #navbar:hover{
@@ -31,16 +32,19 @@ body {
 
 .gridContainer{
   display: grid;
-  grid-template: 1000px 1fr 400px 200px / repeat(2, 1fr);
+  grid-template: 1000px 400px 400px 300px 600px 200px / 1fr;
   grid-template-areas: 
-  "header header"
-  "aboutMe image"
-  "skills work"
-  "footer footer";
+  "header"
+  "aboutMe"
+  "image"
+  "skills"
+  "work"
+  "footer";
   row-gap: 5px;
   column-gap: 5px;
   color: rgb(184, 24, 216);
 }
+
 /* Animation code starts here */
 .header{
   grid-area: header;
@@ -102,6 +106,7 @@ section .box h2 span:nth-child(2){
   }
 }
 /* Animation code ends here */
+
 .header2{
   grid-area: header2;
   display: flex;
@@ -114,6 +119,7 @@ section .box h2 span:nth-child(2){
   justify-content: center;
   padding: 1px 15px;
   background-color: rgb(44, 47, 48);
+  overflow: scroll;
 }
 
 .imageContainer {
@@ -148,17 +154,28 @@ section .box h2 span:nth-child(2){
   /* justify-content: center; */
   flex-direction: column;
   align-items: center;
+  background-color: rgb(44, 47, 48);
 }
 
 .work{
   grid-area: work;
-  display: block;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 10px;
 }
 
 .work li:hover{
   transform: rotate(1deg);
+}
+
+.workImgContainer {
+  display: flex;
+  height: 150px;
+  width: 200px;
+  min-width: 0;
+  min-height: 0;
+
 }
 
 .footer{
@@ -172,3 +189,8 @@ section .box h2 span:nth-child(2){
   padding: 0;
   list-style: none;
 }
+li p{
+  font-style: bold;
+}
+
+
